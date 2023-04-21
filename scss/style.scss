@@ -1,0 +1,25 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@font-face {
+  font-family: AeroKSans;
+  font-weight: 700;
+  src: url(../font/AeroKSans2020-Bold.ttf);
+}
+@font-face {
+  font-family: AeroKSans; 
+  font-weight: 900;
+  src: url(../font/AeroKSans2020-ExtraBold.ttf);  
+}
+@font-face {
+  font-family: AeroKSans;  
+  font-weight: 300;
+  src: url(../font/AeroKSans2020-Light.ttf);  
+}
+@font-face {
+  font-family: AeroKSans;
+  font-weight: 500;
+  src: url(../font/AeroKSans2020-Regular.ttf);
+}
+@import url(../css/normalize.min.css);
+@import url(../css/reset.css);
+@import '_common.scss';

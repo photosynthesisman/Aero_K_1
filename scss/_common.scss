@@ -1096,6 +1096,9 @@ input[type='date'] {
   -moz-box-sizing: border-box !important;   
   -webkit-box-sizing: border-box !important;   
   
+
+  //이 바로 위 input 감싸는 div에 display:flex 걸어주고
+  //아래와 같이 작성
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -1155,7 +1158,7 @@ input::-webkit-datetime-edit {
   justify-content: center;  
   gap: .4rem;   
   > div {
-    display: flex;
+    display: flex; //여기 플렉스(인풋박스 바로 위)
     width: 100%;
   }
   label {

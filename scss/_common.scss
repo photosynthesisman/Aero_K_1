@@ -312,6 +312,9 @@ section {
       line-height: 3.1rem;
     }
     select {
+      -webkit-text-fill-color: #000 !important;
+      opacity: 1 !important;
+
       -o-appearance: none;
       -webkit-appearance: none;
       -moz-appearance: none;
@@ -1082,10 +1085,11 @@ section.intro {
     }
   }
 }
-input, button, select {
+input, button {
   -webkit-text-fill-color: #000;
-  opacity: 1;
+  opacity: 1; //ios에서 input, button, select 텍스트 컬러 이슈
 }
+ 
 input[type='date'] {
   position: relative;
   width: 100%;

@@ -1143,10 +1143,10 @@ input::-webkit-datetime-edit {
 .input_wrap .calendar_box {
   display: flex;
   justify-content: center;  
-  gap: .4rem;
-  input {
-    width: 16.8rem;
-  }  
+  gap: .4rem;   
+  > div {
+    width: 100%;
+  }
   label {
     visibility: hidden;
   }

@@ -1094,6 +1094,11 @@ input[type='date'] {
   box-sizing: border-box !important;
   -moz-box-sizing: border-box !important;   
   -webkit-box-sizing: border-box !important; 
+  display:block;
+  appearance: textfield;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  min-height: 1.2em;
   &::-webkit-calendar-picker-indicator {
     position: absolute;
     z-index: 1;

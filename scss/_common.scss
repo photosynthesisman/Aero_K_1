@@ -327,18 +327,18 @@ section {
       padding: 0.3rem 0;
     }
   }
-  .input_wrap {
-    .calendar_box {
-      display: flex;
-      justify-content: center;
-      gap: 0.4rem;
-      label {
-        visibility: hidden;
-      }
-      > div {
-        width: 100%;
-      }
-    }
+  // .input_wrap {
+  //   .calendar_box {
+  //     display: flex;
+  //     justify-content: center;
+  //     gap: 0.4rem;
+  //     label {
+  //       visibility: hidden;
+  //     }
+  //     > div {
+  //       width: 100%;
+  //     }
+  //   }
     .number_box {
       position: relative;
       display: flex;
@@ -511,7 +511,7 @@ section {
       }
     }
   }
-}
+
 .accommodation {
   position: relative;
   h2 strong {
@@ -1078,12 +1078,11 @@ section.intro {
   }
 }
 
-.input_wrap input[type='date']#departure_day, 
-.input_wrap input[type='date']#arrival_day {
+ input[type='date'] {
   position: relative;
   width: 100%;
-  height: 4.8rem;
-  // padding-left: 5.2rem;
+  height: 4.8rem;  
+  padding-left: 5.2rem;
   background: #f4f8fa;
   border: none;
   overflow: hidden; 
@@ -1116,8 +1115,7 @@ section.intro {
   &::before {
     content: attr(data-placeholder);
     position: absolute; 
-    width: 100%;   
-    left: 5.2rem;
+    width: 100%;       
   }
   &::after {
     content: '';
@@ -1132,5 +1130,17 @@ section.intro {
 }
 input[data-placeholder]::before {
   font-size: 1.6rem;
-  line-height: 4.8rem;
+  line-height: 4.8rem;  
 }
+
+  .calendar_box {
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+    label {
+      visibility: hidden;
+    }
+    > div {
+      width: 100%;
+    }
+  }

@@ -1082,7 +1082,10 @@ section.intro {
     }
   }
 }
-
+input, button {
+  -webkit-text-fill-color: #000;
+  opacity: 1;
+}
 input[type='date'] {
   position: relative;
   width: 100%;

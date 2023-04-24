@@ -1142,6 +1142,7 @@ input::-webkit-datetime-edit {
   padding: 0;
 }
 .input_wrap .calendar_box {
+  width: 100%;
   display: flex;
   justify-content: center;  
   gap: .4rem;   

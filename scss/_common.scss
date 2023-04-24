@@ -336,7 +336,6 @@ section {
         visibility: hidden;
       }
       > div {
-        flex: 1;
         width: 50%;
       }
     }
@@ -1079,7 +1078,8 @@ section.intro {
   }
 }
 
-input[type='date'] {
+.input_wrap input[type='date']#departure_day, 
+.input_wrap input[type='date']#arrival_day {
   position: relative;
   width: 100%;
   height: 4.8rem;

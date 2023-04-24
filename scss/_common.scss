@@ -1132,15 +1132,18 @@ input[data-placeholder]::before {
   font-size: 1.6rem;
   line-height: 4.8rem;  
 }
-
-  .calendar_box {
-    display: flex;
-    justify-content: center;
-    gap: 0.4rem;
-    label {
-      visibility: hidden;
-    }
-    > div {
-      width: 100%;
-    }
+input::-webkit-datetime-edit {
+  display: block;
+  padding: 0;
+}
+.calendar_box {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  label {
+    visibility: hidden;
   }
+  > div {
+    width: 100%;
+  }
+}

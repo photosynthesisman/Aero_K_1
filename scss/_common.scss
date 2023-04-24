@@ -1095,6 +1095,13 @@ input[type='date'] {
   box-sizing: border-box !important;
   -moz-box-sizing: border-box !important;   
   -webkit-box-sizing: border-box !important;   
+  
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   &::-webkit-calendar-picker-indicator {
     position: absolute;
     z-index: 1;
@@ -1148,6 +1155,7 @@ input::-webkit-datetime-edit {
   justify-content: center;  
   gap: .4rem;   
   > div {
+    display: flex;
     width: 100%;
   }
   label {

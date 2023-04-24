@@ -35,6 +35,12 @@ $(document).ready(function () {
     }
   });
 
+  function dateSelection(){
+    $('.calendar_box input').on('input',function () {
+      $(this).removeClass('hideDate')
+    })
+  }
+
   function selection() {
     // $('select[name=departure]').change(function () {
     // $('select[name=departure]').on('input', function () {
@@ -259,9 +265,24 @@ $(document).ready(function () {
       slidesPerView: 'auto',
       slidesOffsetBefore: 24,
       slidesOffsetAfter: 24
+
     });
+    // const swiper2 = new Swiper(".intro .swiper", {
+    //   slidesPerView: 'auto',      
+    //   grabCursor: true,      
+    //   effect: "creative",
+    //   creativeEffect: {
+    //     prev: {
+    //       shadow: true,
+    //       translate: ["-100%", 0, -1],
+    //     },
+    //     next: {
+    //       translate: ["100%", 0, 0],
+    //     },
+    //   },
+    // });
   }
-  const swiper2 = new Swiper('.swiper', {
+  // const swiper2 = new Swiper('.swiper', {
     // slidesPerView: 1,
     // spaceBetween: 20,
     // slidesPerView: 'auto',
@@ -275,11 +296,12 @@ $(document).ready(function () {
     // $('').data('taran') //불러올 때
     // $('').data('taran', 'lalala') //입력할 때
     // $('').data('taran') //
-  });
+  // });
   selection();
   popupEvent();
   swiper();
   swiper1();
   tab1();
   observer();
+  dateSelection()
 });

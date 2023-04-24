@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,22 +8,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/style.min.css" />
     <title>Aero_K</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.0/swiper-bundle.min.js" integrity="sha512-KBCt3sdFOcFtYTgEfE3uJckVpvPr1w8HPugyPgHFE/4iJOwhwj6eSaF27bDJTHRX2jyAFOgV3Ve9vOD97rbjrg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./js/main.js"></script>
-    <!-- 스크립트는 가장 밑으로 -->
   </head>
   <body>
     <div class="wrap">
       <div class="header">
         <h1 class="logo"><a href="#none">Aero_K</a></h1>
-        <div class="gnb_botton"><a href="#none">gnb_btn</a></div>
+        <div class="gnb_botton"><a href="#none" role="button">gnb_btn</a></div>
         <!-- 버튼의 역할을 하는 a태그에는 role="button"을 넣어줘야 함 -->
       </div>
 
       <section class="reservation">
-        <h2 class="hidden">새로운 여정의 시작</h2>
+        <h2 aria-label="새로운 여정의 시작"></h2>
         <!-- hidden 대신 aria-label 활용 -->
         <div class="main_image"></div>
         <div class="select_wrap">
@@ -54,13 +49,13 @@
         <div class="input_wrap">
           <div class="calendar_box">
             <div class="departure_day">
-              <input type="date" id="departure_day" class="fz-16 fw-500" name="departure_day" data-placeholder="가는 날" required />
               <!-- title 달아줄 것! -->
               <label for="departure_day">가는 날</label>
+              <input type="date" id="departure_day" class="fz-16 fw-500 hideDate" name="departure_day" data-placeholder="가는 날" title="출발 날짜 선택" required />
             </div>
             <div class="arrival_day">
-              <input type="date" id="arrival_day" class="fz-16 fw-500" name="arrival_day" data-placeholder="오는 날" required />
               <label for="arrival_day">오는 날</label>
+              <input type="date" id="arrival_day" class="fz-16 fw-500 hideDate" name="arrival_day" data-placeholder="오는 날" title="도착 날짜 선택" required />
             </div>
           </div>
           <div class="number_box fz-16 fw-500">
@@ -71,13 +66,13 @@
           <div class="check_box fz-16 fw-500">
             <div class="order_wrap">
               <div class="for_order">
-                <input type="checkbox" id="round_trip" />왕복
-                <label for="round_trip"></label>
+                <input type="checkbox" id="round_trip" name="round_trip" title="왕복 선택" />
+                <label for="round_trip">왕복</label>
               </div>
               <div class="for_order">
-                <input type="checkbox" id="one_way" />편도
-                <label for="one_way"></label>
-              </div>
+                <input type="checkbox" id="one_way" name="one_way" title="편도 선택" />
+                <label for="one_way">편도</label>
+              </div>              
             </div>
             <div class="promotion_code">
               <input type="text" id="pm_text" placeholder="프로모션코드 입력" />
@@ -365,14 +360,8 @@
       <div class="footer_back">
         <div class="footer">
           <div class="subscribe">
-            <div class="box white">
-              <p>특가 및 소식을 확인하세요</p>
-            </div>
-            <div class="box color">
-              <p>구독신청</p>
-              <a href="#none"></a>
-            </div>
-            <a href="#none"></a>
+            <a href="#none" class="box white">특가 및 소식을 확인하세요</a>
+            <button class="box color">구독신청</button>
           </div>
           <div class="sns">
             <div class="facebook">
@@ -489,5 +478,9 @@
         </div>
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.0/swiper-bundle.min.js" integrity="sha512-KBCt3sdFOcFtYTgEfE3uJckVpvPr1w8HPugyPgHFE/4iJOwhwj6eSaF27bDJTHRX2jyAFOgV3Ve9vOD97rbjrg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script src="./js/main.js" defer></script>
   </body>
 </html>

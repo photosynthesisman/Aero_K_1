@@ -86,21 +86,44 @@ $(document).ready(function () {
   }
 
   function popupEvent() {
+    let scrollPosition = 0;        
+    const body = document.querySelector('body');
+
+    function enable() {
+      scrollPosition = window.pageYOffset;
+      body.style.overflow = 'hidden';
+      body.style.position = 'fixed';
+      body.style.top = `-${scrollPosition}px`;
+      body.style.width = '100%';
+    }
+    
+    function disable() {
+      body.style.removeProperty('overflow');
+      body.style.removeProperty('position');
+      body.style.removeProperty('top');
+      body.style.removeProperty('width');
+      window.scrollTo(0, scrollPosition);
+    }
+    
     $('.popup').click(function (e) {
       e.preventDefault;
+      enable();
       $('.popup_num').addClass('slide');
     });
     $('.close').click(function (e) {
       e.preventDefault;
+      disable();
       $('.popup_num').removeClass('slide');
     });
     $('.popfooter .prev').click(function (e) {
       e.preventDefault;
+      disable();
       $('.popup_num').removeClass('slide');
     });
     $('.popfooter .finish').click(function (e) {
       e.preventDefault;
       const calculated = document.querySelector('.calculated').innerText;
+      disable();
       $('.popup_num').removeClass('slide');
       $('.input_wrap .number_box').text(calculated);
       if (calculated == '') {
@@ -110,6 +133,7 @@ $(document).ready(function () {
       $('.popup').click(function (e) {
         e.preventDefault;
         $('.popup_num').addClass('slide');
+        enable();
       });
     });
   }

@@ -1142,12 +1142,10 @@ input::-webkit-datetime-edit {
 }
 .input_wrap .calendar_box {
   display: flex;
-  justify-content: space-between;  
-  > div {
-    width: calc(50% - .2rem);
-  }
-  .departure_day input[type='date'] {
-    margin-right: .4rem;
+  justify-content: center;  
+  gap: .4rem;
+  input {
+    width: 16.8rem;
   }  
   label {
     visibility: hidden;

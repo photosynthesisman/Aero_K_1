@@ -348,7 +348,7 @@ section {
       height: 5.2rem;
       margin-top: 0.4rem;
       margin-bottom: 2rem;
-      // padding-left: 5.2rem;
+      padding-left: 5.2rem;
       background: #f4f8fa;
       &::before {
         content: '';
@@ -1083,7 +1083,7 @@ section.intro {
   position: relative;
   width: 100%;
   height: 4.8rem;
-  padding-left: 5.2rem;
+  // padding-left: 5.2rem;
   background: #f4f8fa;
   border: none;
   overflow: hidden; 
@@ -1115,7 +1115,9 @@ section.intro {
   }
   &::before {
     content: attr(data-placeholder);
-    width: 100%;    
+    position: absolute; 
+    width: 100%;   
+    left: 5.2rem;
   }
   &::after {
     content: '';

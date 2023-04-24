@@ -1090,6 +1090,10 @@ section.intro {
   box-sizing: border-box;
   -moz-box-sizing: border-box;   
   -webkit-box-sizing: border-box !important;
+  @at-root .calendar_box input[type='date'] {
+    width: 100%;
+    min-width: 50%;
+  }
   &::-webkit-calendar-picker-indicator {
     position: absolute;
     z-index: 1;

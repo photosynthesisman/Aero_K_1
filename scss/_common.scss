@@ -1086,7 +1086,10 @@ section.intro {
   padding-left: 5.2rem;
   background: #f4f8fa;
   border: none;
-  overflow: hidden;  
+  overflow: hidden; 
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;   
+  -webkit-box-sizing: border-box !important;
   &::-webkit-calendar-picker-indicator {
     position: absolute;
     z-index: 1;

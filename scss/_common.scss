@@ -1090,15 +1090,11 @@ input[type='date'] {
   padding-left: 5.2rem;
   background: #f4f8fa;
   border: none;
-  overflow: hidden; 
+  overflow: hidden;   	
+	-ms-box-sizing: border-box !important;	
   box-sizing: border-box !important;
   -moz-box-sizing: border-box !important;   
-  -webkit-box-sizing: border-box !important; 
-  display:block;
-  appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  min-height: 1.2em;
+  -webkit-box-sizing: border-box !important;   
   &::-webkit-calendar-picker-indicator {
     position: absolute;
     z-index: 1;

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/style.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
     <title>Aero_K</title>
   </head>
   <body>
@@ -15,6 +16,33 @@
         <h1 class="logo"><a href="#none">Aero_K</a></h1>
         <div class="gnb_botton"><a href="#none" role="button">gnb_btn</a></div>
         <!-- 버튼의 역할을 하는 a태그에는 role="button"을 넣어줘야 함 -->
+      </div>
+
+      <div class="popup">
+        <div class="pop_wrap">
+          <p class="rule">
+          본 웹사이트는 구직용 포트폴리오 사이트로써,<br>aero_K와 무관합니다.
+          이미지와 내용의 저작권은<br> aero_K에 있습니다.
+          본 웹사이트는 모바일에<br> 최적화되어 있습니다.
+          </p>
+          <div class="index">
+          <p>제작기간 : 2023. 4. 7 - 2023. 4. 21</p>
+          <p>레이아웃 : HTML, SCSS, javascript, jQuery</p>
+          </div>
+          
+          <div class="mailto">
+            <span class="material-symbols-sharp">mail</span>
+            <a href="mailto:photosynthesis2@naver.com">photosynthesis2@naver.com</a>
+          </div>
+          <br>
+          <div class="popup_button">
+              <div class="nosee">
+                  <label for="nomore">하루 안보기</label>
+                  <input type="checkbox" id="nomore">
+              </div>
+              <button>닫기</button>
+          </div>
+        </div>     
       </div>
 
       <section class="reservation">
@@ -62,7 +90,7 @@
           <div class="number_box fz-16 fw-500">
             <span class="classify">성인</span>
             <span class="num">1</span>
-            <a href="#none" class="popup"></a>
+            <a href="#none" class="popup_open"></a>
           </div>
           <div class="check_box fz-16 fw-500">
             <div class="order_wrap">

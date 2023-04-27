@@ -16,6 +16,7 @@
   --title-color-blue: #0070ff;
   --Aero_Yellow: #feb81e;
   --Aero_Navy: #002554;
+  --white : #fff;
 }
 html {
   font-size: 62.5%;
@@ -1171,5 +1172,68 @@ input::-webkit-datetime-edit {
   }
   label {
     visibility: hidden;
+  }
+}
+.popup{
+  color: var(--white);
+  width: 38rem; 
+  position: fixed;
+  top: 5rem;
+  right: 5rem;
+  z-index: 1000;
+  background: rgba(22, 22, 22, 0.7);      
+  .pop_wrap {  
+    padding: 3rem;    
+    .rule {
+      line-height: 2.4rem;
+      letter-spacing: -0.5px;
+    } 
+  }
+  .index {
+    margin: 2rem 0 4rem;    
+    > p {
+      letter-spacing: .1px;
+    }
+    > p:first-child {
+      margin-bottom: 1rem;
+    }
+  }
+  .mailto {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    > a {
+      margin-left: 1rem;
+      color: var(--white);    
+      font-weight: 500;
+      letter-spacing: 0.25px;
+    }
+  } 
+  .popup_button {    
+    width: 100%;
+    height: 5rem;
+    background: rgba(33, 33, 33, 0.6);   
+    display: flex;    
+    justify-content: space-between; 
+    align-items: center;
+    .nosee, button {
+      flex: 1;
+    }
+    button {
+      cursor: pointer;
+      background: none;         
+      border: none;
+      padding: 0;
+      border-left: 1.5px solid rgba(33, 33, 33, 0.8);
+      color: var(--white);
+      -webkit-text-fill-color :var(--white);
+    }
+    .nosee {
+      text-align: center;
+      justify-content: center;    
+      #nomore {
+        margin-left: 1rem;    
+      }
+    }
   }
 }

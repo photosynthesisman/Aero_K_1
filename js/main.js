@@ -1,4 +1,53 @@
 $(document).ready(function () {
+
+  let myPopup = document.querySelector('.popup'),
+  closeBtn = myPopup.querySelector('button'),
+  oneDayCheck = document.querySelector('#nomore');
+
+  function checkcookie(name){
+      var cookies = document.cookie.split(';');
+      var visited = false;
+
+      for(ck of cookies){
+          if(ck.indexOf(name) > -1){
+              visited = true;
+          }                
+      }
+      if(visited == true){
+          myPopup.style.display = 'none';            
+      }else{
+          myPopup.style.display = 'block';        
+      }
+  }
+  checkcookie('aeroK1');
+
+  function setCookie(name,value,day){           
+      var date = new Date();
+      date.setDate(date.getDate()+day);
+
+      var myCookie = '';
+      myCookie = `${name}=${value};Expires=${date.toUTCString()}`;            
+      document.cookie = myCookie;
+  }//setcookie
+
+  function deleteCookie(name,value){                
+      var date = new Date();            
+      date.setDate(date.getDate()-1);
+
+      var myCookie = '';
+      myCookie = `${name}=${value};Expires=${date.toUTCString()}`;   
+      document.cookie = myCookie;
+  }
+
+  closeBtn.addEventListener('click',()=>{
+      if(!oneDayCheck.checked){ 
+          deleteCookie('aeroK1','home');
+      }else{
+          setCookie('aeroK1','home',1);
+      }
+  myPopup.style.display = 'none';
+  });
+
   function observer() {
     const bannerElems = document.querySelectorAll('.banner');
     const sectionElems = document.querySelectorAll('section');
@@ -105,7 +154,7 @@ $(document).ready(function () {
       window.scrollTo(0, scrollPosition);
     }
     
-    $('.popup').click(function (e) {
+    $('.popup_open').click(function (e) {
       e.preventDefault;
       enable();
       $('.popup_num').addClass('slide');

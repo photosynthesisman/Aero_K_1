@@ -1190,9 +1190,11 @@ input::-webkit-datetime-edit {
   z-index: 1000;
   background: rgba(22, 22, 22, 0.7);      
   @media screen and (max-width: 450px){  
-    width: 34rem; 
-    right: 50%;
-    transform: translateX(50%);
+    & {
+      width: 34rem; 
+      right: 50%;
+      transform: translateX(50%);
+    }
   }
   .pop_wrap {  
     padding: 3rem;    
@@ -1200,7 +1202,9 @@ input::-webkit-datetime-edit {
       line-height: 2.4rem;
       letter-spacing: -0.5px;
       @media screen and (max-width: 450px){  
-        font-size: 1.4rem;
+        & {
+          font-size: 1.4rem;
+        }
       }
     } 
   }

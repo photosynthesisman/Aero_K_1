@@ -185,10 +185,11 @@ $(document).ready(function () {
 
   plusBtn.click(function () {
     let amount = $(this).siblings('.data_num');
-    let currentAmount = amount.text();
-    currentAmount++;
-    amount.text(currentAmount);
-    if (currentAmount > 0) {
+    let currentAmount = amount.text();    
+    
+    if (currentAmount < 10) {
+      currentAmount++;
+      amount.text(currentAmount);           
       $(this).siblings('.minus').removeClass('disabled');
       let classes = $(this).parent().siblings().parent().attr('class');
       $('.calculated')
@@ -220,6 +221,9 @@ $(document).ready(function () {
       ) {
         $('.calculated').find('.babe .num').text(numberOfbabe);
       }
+    }  
+    if (currentAmount == 10){
+      $(this).addClass('disabled');
     }
   });
 
@@ -236,6 +240,7 @@ $(document).ready(function () {
         .removeClass('show');
     } else if (currentAmount > 1) {
       amount.text(--currentAmount);
+      $(this).siblings('.plus').removeClass('disabled');
       let classes = $(this).parent().siblings().parent().attr('class');
       $('.calculated')
         .children('.' + classes)

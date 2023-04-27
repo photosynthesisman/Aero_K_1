@@ -98,33 +98,26 @@ $(document).ready(function () {
     $('select[name=departure]').change(function () {
       const val = $(this).val();
       const option = $(this).find($('option[value=' + val + ']'));
+      const dtOption = $('select[name=destination]').find($('option[value=' + val + ']'));
       const selecteded = $(this).find($('option:selected'));
       const dataAirport = option.data('airport');
       const siblingValue = $(this).parent().siblings('.select_box').find('select').val();
-
-      if (val === siblingValue) {
-        alert('출발지와 목적지가 같습니다');
-        selecteded.prop('selected', false);
-        $(this).siblings('.airport_code').text('CJJ');
-      } else {
-        $(this).siblings('.airport_code').text(dataAirport);
-      }
+      
+      dtOption.siblings().removeClass('delete')      
+      dtOption.addClass('delete')
     });
 
     $('select[name=destination]').change(function () {
       const val = $(this).val();
       const option = $(this).find($('option[value=' + val + ']'));
+      const dpOption = $('select[name=departure]').find($('option[value=' + val + ']'));
       const selecteded = $(this).find($('option:selected'));
       const dataAirport = option.data('airport');
       const siblingValue = $(this).parent().siblings('.select_box').find('select').val();
 
-      if (val === siblingValue) {
-        alert('출발지와 목적지가 같습니다');
-        selecteded.prop('selected', false);
-        $(this).siblings('.airport_code').text('CJU');
-      } else {
-        $(this).siblings('.airport_code').text(dataAirport);
-      }
+      dpOption.siblings().removeClass('delete')      
+      dpOption.addClass('delete')
+   
     });
 
     $('.switch_btn').click(function (e) {

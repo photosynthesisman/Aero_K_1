@@ -333,6 +333,9 @@ section {
       background: black;
       color: #fff;
       padding: 0.3rem 0;
+      &.delete {
+        display: none;
+      }
     }
   }
   // .input_wrap {

@@ -171,8 +171,8 @@ $(document).ready(function () {
       if (calculated == '') {
         $('.input_wrap .number_box').html('<span class=' + 'classify' + '>' + '성인</span>' + '<span class=' + '"num"' + '>1</span>');
       }
-      $('.input_wrap .number_box').append('<a href=' + '#none ' + 'class=' + '"popup"' + '></a>');
-      $('.popup').click(function (e) {
+      $('.input_wrap .number_box').append('<a href=' + '#none ' + 'class=' + '"popup_open"' + '></a>');
+      $('.popup_open').click(function (e) {
         e.preventDefault;
         $('.popup_num').addClass('slide');
         enable();
